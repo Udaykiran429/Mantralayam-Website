@@ -1,0 +1,419 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #c1bebe;
+}
+
+/* Header */
+/* Header */
+.header {
+    background-color: #e21d1d;
+    padding: 20px 0;
+}
+
+/* Header content */
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* Logo */
+.logo {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+/* Heading */
+.header-content h1 {
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+
+/* Navbar */
+.navbar {
+  background-color: #0d76a4;
+    margin: 20px auto;          /* center it */
+    width: 100%;                /* full width */
+    max-width: 1200px;          /* same as content */
+    border-radius: 50px;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.nav-menu li {
+    padding: 15px 25px;
+    
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 8px 12px;
+    transition: 0.3s;
+}
+
+/* Active menu */
+.nav-link.active {
+    background-color: #ffd700;
+    color: black;
+    border-radius: 5px;
+}
+
+/* Hover */
+.nav-link:hover {
+    background-color: #f9cb15;
+    color: black;
+    border-radius: 10px;
+}
+
+/* Content */
+.content {
+    padding: 30px;
+    max-width: 1500px;
+    margin: auto;
+}
+
+/* Sections */
+.section {
+    display: none;
+    background: white;
+    margin-top: -10px;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Active section */
+.active-section {
+    display: block;
+    font-size: 20px;
+
+}
+/* Home image */
+.home-img {
+    width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+}
+
+#admin-login input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+#admin-login button,
+#admin-dashboard button {
+    padding: 10px 20px;
+    background-color: #7b1e1e;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#admin-error {
+    color: red;
+}
+
+/* Password input with eye icon */
+.password-box {
+    position: relative;
+    width: 100%;
+}
+
+.password-box input {
+    width: 100%;
+    padding: 10px;
+    padding-right: 40px; /* space for eye */
+    margin: 10px 0;
+}
+
+.eye-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 18px;
+    user-select: none;
+}
+.seva-card {
+    background: #f8f8f8;
+    padding: 15px;
+    margin: 15px 0;
+    border-left: 5px solid #e21d1d;
+    border-radius: 6px;
+}
+
+#idForm input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+}
+
+#idForm button {
+    padding: 10px 20px;
+    background: #0d76a4;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.id-card {
+    display: none;
+    width: 300px;
+    margin-top: 20px;
+    padding: 15px;
+    border: 2px solid #000;
+    text-align: center;
+    background: #fff;
+}
+
+.id-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 10px 0;
+}
+/* Admin action buttons */
+.admin-actions {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;          /* space between buttons */
+    flex-wrap: wrap;   /* safe on small screens */
+}
+
+.admin-actions button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Clear data button */
+.danger-btn {
+    background-color: #8b0000;
+    color: white;
+}
+
+/* Logout button */
+.logout-btn {
+    background-color: #444;
+    color: white;
+}
+
+table {
+    border-collapse: collapse;
+    margin-top: 25px;
+    background: #fff;
+}
+
+th {
+    background-color: #0d76a4;
+    color: white;
+}
+
+td, th {
+    text-align: center;
+}
+
+
+/* Image */
+/* About Us slider container */
+.about-slider {
+    width: 50%;
+    max-width: 100%;
+    height: 600px;              /* ⬅ reduce height */
+    margin: 10px auto 20px;     /* ⬅ position nicely */
+    overflow: hidden;
+    border-radius: 12px;
+    position: relative;
+}
+
+/* Individual images */
+.about-slide {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;          /* ⬅ keeps image proportional */
+    object-position: center;    /* ⬅ centers image */
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-ou
+}
+
+.about-slide.active {
+    opacity: 1;
+}
+
+#chatbot-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #0d76a4;
+    color: white;
+    padding: 12px 14px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+#chatbot {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 300px;
+    background: white;
+    border-radius: 10px;
+    display: none;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.chat-header {
+    background: #0d76a4;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#chat-body {
+    height: 220px;
+    padding: 10px;
+    overflow-y: auto;
+    font-size: 14px;
+}
+
+.chat-input {
+    display: flex;
+    border-top: 1px solid #ccc;
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 8px;
+    border: none;
+}
+
+.chat-input button {
+    background: #0d76a4;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+.bot {
+    background: #f1f1f1;
+    padding: 6px;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
+.user {
+    background: #0d76a4;
+    color: white;
+    padding: 6px;
+    margin: 5px 0;
+    border-radius: 5px;
+    text-align: right;
+}
+
+
+
+
+
+
+
+
+
+@media (max-width: 600px) {
+    .header-content {
+        flex-direction: column;
+    }
+
+    .logo {
+        width: 50px;
+        height: 50px;
+    }
+
+    .header-content h1 {
+        font-size: 26px;
+    }
+}
+
+/* For tablets */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;  /* Stack menu items */
+  }
+  .content {
+    font-size: 16px;         /* Adjust font */
+  }
+}
+
+/* For phones */
+@media (max-width: 480px) {
+  .header img {
+    width: 100%;             /* Full-width logo */
+  }
+  .sidebar {
+    display: none;           /* Hide sidebar */
+  }
+}
+
+@media (max-width: 768px) {
+    .about-slider {
+        height: 180px;   /* smaller on phones */
+    }
+}
+
+/* ===== MOBILE NAVBAR – FINAL FIX ===== */
+@media (max-width: 768px) {
+
+    .navbar {
+        margin: 10px;
+        padding: 8px 0;
+        border-radius: 14px;
+    }
+
+    .nav-menu {
+        display: flex;
+        flex-direction: column;     /* STACK vertically */
+        align-items: stretch;       /* full width buttons */
+    }
+
+    .nav-menu li {
+        padding: 6px 12px;
+    }
+
+    .nav-link {
+        display: block;
+        width: 100%;
+        text-align: center;
+        font-size: 15px;
+        padding: 10px 0;
+        border-radius: 8px;
+    }
+}
